@@ -1,0 +1,13 @@
+services:
+  db:
+    image: ${MAGE_DB_IMAGE}:${MAGE_DB_TAG}
+    volumes:
+      - database:/var/lib/mysql
+    restart: on-failure:5
+    environment:
+      - MYSQL_ALLOW_EMPTY_PASSWORD=true
+      - MYSQL_DATABASE=magento
+    ports:
+      - 3306:3306 
+volumes:
+  database:
