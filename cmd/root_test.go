@@ -41,6 +41,6 @@ func Test_rootCmdExecute(t *testing.T) {
 
 func Test_rootCmdExecuteOtherConfig(t *testing.T) {
 
-	cfgFile = ".mach"
+	cfgFile = ".mage"
 	Execute()
 }
