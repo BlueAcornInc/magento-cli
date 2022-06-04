@@ -10,7 +10,7 @@ workflow around this tool.
 package main
 
 import (
-	"github.com/superterran/magneto-cli/cmd"
+	"github.com/superterran/magento-cli/cmd"
 )
 
 func main() {
