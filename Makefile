@@ -13,7 +13,7 @@ help:
 build: ## creates binary
 	go build .
 install: build ## compiles and installs into system
-	sudo cp mach /usr/local/bin/magento
+	sudo cp magento-cli /usr/local/bin/magento
 	sudo chmod +x /usr/local/bin/magento
 run: ## run the command through go, accepts args i.e. `make run -- build -h`
 	go run ./main.go $(RUN_ARGS)
