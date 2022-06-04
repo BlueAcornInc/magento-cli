@@ -9,10 +9,10 @@ workflow around this tool.
 */
 package main
 
-import (
-	"github.com/superterran/magento-cli/cmd"
-)
+// import (
+// 	"github.com/superterran/magento-cli/cmd"
+// )
 
 func main() {
-	cmd.Execute()
+	// cmd.Execute()
 }
