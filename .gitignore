@@ -1,3 +1,7 @@
 go.sum
 example
 magento-cli
+docs/themes
+docs/public
+docs/resources
+docs/.hugo_build.lock
