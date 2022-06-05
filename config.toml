@@ -1,4 +1,4 @@
-baseURL = "/"
+baseURL = "/magento-cli/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
