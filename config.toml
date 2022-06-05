@@ -1,13 +1,12 @@
-baseURL = "/magento-cli/"
+baseURL = "magento-cli/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
 title = "magento-cli docs"
 theme = "hugo-theme-learn"
-themesDir = "./docs/themes/"
+themesDir = ".hugo/themes/"
 
-
-
+contentDir = "docs"
 metaDataFormat = "yaml"
 defaultContentLanguageInSubdir= true
 
