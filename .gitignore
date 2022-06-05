@@ -5,3 +5,4 @@ docs/themes
 public
 resources
 .hugo_build.lock
+.envrc

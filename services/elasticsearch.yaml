@@ -1,5 +1,6 @@
+services:
   elasticsearch:
-    image: ${MAGE_ES_IMAGE}:${MAGE_ES_TAG}
+    image: ${MAGECLI__ES_IMAGE}:${MAGECLI__ES_TAG}
     restart: on-failure:5
     environment:
       - discovery.type=single-node

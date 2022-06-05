@@ -1,6 +1,6 @@
 services:
   db:
-    image: ${MAGE_DB_IMAGE}:${MAGE_DB_TAG}
+    image: ${MAGECLI__DB_IMAGE}:${MAGECLI__DB_TAG}
     volumes:
       - database:/var/lib/mysql
     restart: on-failure:5

@@ -10,9 +10,41 @@ workflow around this tool.
 package main
 
 import (
-	"github.com/superterran/magento-cli/cmd"
+	"fmt"
+	"io/ioutil"
+	"log"
+	"os"
+	"path/filepath"
+
+	"github.com/mumoshu/variant/cmd"
 )
 
 func main() {
-	cmd.Execute()
+
+	data := ""
+
+	files, err := ioutil.ReadDir("../tasks")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	for _, f := range files {
+
+		if filepath.Ext(f.Name()) == ".yaml" {
+			content, _ := ioutil.ReadFile("../tasks/" + f.Name())
+
+			data = data + string(content) + "\n"
+		}
+
+	}
+
+	ex, err := os.Executable()
+	if err != nil {
+		panic(err)
+	}
+	exPath := filepath.Dir(ex)
+	fmt.Println(exPath)
+
+	text := string(data)
+	cmd.YAML(text)
 }

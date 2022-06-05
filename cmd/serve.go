@@ -10,11 +10,11 @@ import (
 	"github.com/spf13/viper"
 )
 
-var Command = " -S " + BaseUrl + " -t ./pub/ ./phpserver/router.php"
+var Command = "php -S " + BaseUrl
 
 // BuildImageDirname tells the tool which directory to itereate through to find Dockerfiles. defaults the present working
 // directory, but a good practice is to mint a .mach.yaml and set this to `images` or the like when building an IaC repo.
-var BaseUrl string = "magento.test:8200"
+var BaseUrl string = "127.0.0.1:8200"
 
 var serveCmd = CreateServeCmd()
 
@@ -51,29 +51,18 @@ func runServe(cmd *cobra.Command, args []string) error {
 // MainServeFlow will run the local php server
 func MainServeFlow(args []string) error {
 
-	cmd := exec.Command("php", "-S ", BaseUrl, "-t", "./pub/", "./phpserver/router.php")
-	// some command output will be input into stderr
-	// e.g.
-	// cmd := exec.Command("../../bin/master_build")
-	// stderr, err := cmd.StderrPipe()
-	stdout, err := cmd.StdoutPipe()
-	if err != nil {
-		fmt.Println(err)
+	cmd := exec.Command("sh", "-c", Command)
+	pipe, _ := cmd.StdoutPipe()
+	if err := cmd.Start(); err != nil {
+		// handle error
+		return nil
 	}
-
-	err = cmd.Start()
-	fmt.Println("The command is running")
-	if err != nil {
-		fmt.Println(err)
+	reader := bufio.NewReader(pipe)
+	line, err := reader.ReadString('\n')
+	fmt.Println(line)
+	for err == nil {
+		fmt.Println(line)
+		line, err = reader.ReadString('\n')
 	}
-
-	// print the output of the subprocess
-	scanner := bufio.NewScanner(stdout)
-	for scanner.Scan() {
-		m := scanner.Text()
-		fmt.Println(m)
-	}
-	cmd.Wait()
 	return nil
-
 }
