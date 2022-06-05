@@ -1,0 +1,4 @@
+#!/usr/bin/env variant
+script: |
+  CMD=$(echo {{ index .args }} |  sed -r 's/(\[|\])//g')
+  $MAGECLI_PHP_CMD bin/magento $CMD

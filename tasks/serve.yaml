@@ -2,9 +2,17 @@
 tasks:
   serve:
     parameters:
-    - name: baseurl
+    - name: host
       type: string
-      description: "base url"
-      default: "localhost:8080"
+      description: hostname to serve
+      default: 0.0.0.0
+    - name: port
+      type: string
+      description: php server port
+      default: "8080"
+    - name: routes
+      tyoe: string
+      description: routes used for local development server
+      default: $(pwd)/pub/ $(pwd)/phpserver/router.php
     script: |
-      php -S {{ get "baseurl" }} -t $(pwd)/pub/ $(pwd)/phpserver/router.php
+      php -S {{ get "host" }}:{{ get "port" }} -t {{ get "routes" }}
