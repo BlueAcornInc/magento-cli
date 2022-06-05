@@ -1,4 +1,4 @@
-baseURL = "/magento-cli/"
+baseURL = "https://superterran.net/magento-cli/"
 languageCode = "en-US"
 defaultContentLanguage = "en"
 
