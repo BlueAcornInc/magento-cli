@@ -8,4 +8,4 @@ tasks:
       description: project slug
       default: localhost
     script: |
-      docker-compose --project-name {{ get "project" }} -f $MAGECLI__PATH/services/database.yaml -f $MAGECLI__PATH/services/elasticsearch.yaml up -d && sleep 3
+      docker-compose --project-name {{ get "project" }} -f $MAGECLI_PATH/services/database.yaml -f $MAGECLI_PATH/services/elasticsearch.yaml up -d && sleep 3

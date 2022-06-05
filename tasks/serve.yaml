@@ -5,6 +5,6 @@ tasks:
     - name: baseurl
       type: string
       description: "base url"
-      default: "localhost:8200"
+      default: "localhost:8080"
     script: |
       php -S {{ get "baseurl" }} -t $(pwd)/pub/ $(pwd)/phpserver/router.php
