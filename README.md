@@ -45,7 +45,7 @@ If you prefer to compile from source, the Makefile can be used:
 
 # Contributing
 
-For a complete guide to contributing to Mach, see the [Contribution Guide](CONTRIBUTING.md)
+For a complete guide to contributing to magento-cli, see the [Contribution Guide](CONTRIBUTING.md)
 
 Bug reports and pull requests are welcome on GitHub at https://github.com/superterran/magento-cli/issues. 
 
@@ -53,4 +53,4 @@ Bug reports and pull requests are welcome on GitHub at https://github.com/supert
 Mach is released under the [MIT License](LICENSE)
 
 # Author Information
-This project was started in 2021 by Doug Hatcher <superterran@gmail.com>.
+This project was started in 2022 by Doug Hatcher <superterran@gmail.com>.
