@@ -11,8 +11,9 @@ package main
 
 import (
 	"embed"
-	"fmt"
 	"io/fs"
+	"io/ioutil"
+	"log"
 	"os"
 	"path/filepath"
 
@@ -23,49 +24,50 @@ import (
 //go:embed tasks/*.yaml
 var tasks embed.FS
 
+var yamlExt string = ".yaml"
+
+var configDir string = ".magento-cli"
+
 func main() {
 
 	data := ""
 
+	// fetches basic configuration, this uses embed.FS and sources from ./tasks/
 	fs.WalkDir(tasks, ".", func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
+
 		// fmt.Printf("path=%q, isDir=%v\n", path, d.IsDir())
 
 		content, err := fs.ReadFile(tasks, path)
-		if err != nil {
-			// return err // or panic or ignore
+		if err == nil {
+			data = data + string(content) + "\n"
 		}
-
-		data = data + string(content) + "\n"
 
 		return nil
 
 	})
 
-	// files, err := ioutil.ReadDir("../tasks")
-	// if err != nil {
-	// 	log.Fatal(err)
-	// }
+	// override mechanism, .magento-cli directories can contain additional configs
+	if _, err := os.Stat(configDir); !os.IsNotExist(err) {
+		files, err := ioutil.ReadDir(configDir)
+		if err != nil {
+			log.Fatal(err)
+		} else {
+			for _, f := range files {
 
-	// for _, f := range files {
+				if filepath.Ext(f.Name()) == yamlExt {
+					content, _ := ioutil.ReadFile(configDir + f.Name())
 
-	// 	if filepath.Ext(f.Name()) == ".yaml" {
-	// 		content, _ := ioutil.ReadFile("../tasks/" + f.Name())
+					data = data + string(content) + "\n"
+				}
 
-	// 		data = data + string(content) + "\n"
-	// 	}
-
-	// }
-
-	ex, err := os.Executable()
-	if err != nil {
-		panic(err)
+			}
+		}
 	}
-	exPath := filepath.Dir(ex)
-	fmt.Println(exPath)
 
+	// feeds configuration into paraser and executes
 	text := string(data)
 	cmd.YAML(text)
 }
