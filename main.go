@@ -10,33 +10,54 @@ workflow around this tool.
 package main
 
 import (
+	"embed"
 	"fmt"
-	"io/ioutil"
-	"log"
+	"io/fs"
 	"os"
 	"path/filepath"
 
 	"github.com/mumoshu/variant/cmd"
 )
 
+// content holds our static web server content.
+//go:embed tasks/*.yaml
+var tasks embed.FS
+
 func main() {
 
 	data := ""
 
-	files, err := ioutil.ReadDir("../tasks")
-	if err != nil {
-		log.Fatal(err)
-	}
+	fs.WalkDir(tasks, ".", func(path string, d fs.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+		// fmt.Printf("path=%q, isDir=%v\n", path, d.IsDir())
 
-	for _, f := range files {
-
-		if filepath.Ext(f.Name()) == ".yaml" {
-			content, _ := ioutil.ReadFile("../tasks/" + f.Name())
-
-			data = data + string(content) + "\n"
+		content, err := fs.ReadFile(tasks, path)
+		if err != nil {
+			// return err // or panic or ignore
 		}
 
-	}
+		data = data + string(content) + "\n"
+
+		return nil
+
+	})
+
+	// files, err := ioutil.ReadDir("../tasks")
+	// if err != nil {
+	// 	log.Fatal(err)
+	// }
+
+	// for _, f := range files {
+
+	// 	if filepath.Ext(f.Name()) == ".yaml" {
+	// 		content, _ := ioutil.ReadFile("../tasks/" + f.Name())
+
+	// 		data = data + string(content) + "\n"
+	// 	}
+
+	// }
 
 	ex, err := os.Executable()
 	if err != nil {
