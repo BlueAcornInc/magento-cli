@@ -10,6 +10,35 @@ On linux, docker works exceptionally well with near-native performance. On other
 
 Considering other popular languages and frameworks, like this `hugo` documentation site as an example, it's written in golang and when you want to serve the blog locally, you run `hugo serve` which spawns a webserver and provides a url. `pwa-studio` works the same way with `webpack`, it's a popular convention. Let's provide the same convention, and support using php's built-in web server as a way to serve magento. We can still provide docker-backed services, even a php-fpm service (with mutagen, if you insist) to round things out. But this project differentates from others because it has first-class support for pre-compiled php binaries. These are provided by `brew` and `phpbrew` by the way, easy to install, and are substantially faster than running it in a mult-arch docker container.
 
+# Roadmap
+
+Here's the expected features to be implemented before this project goes to 1.0
+
+* Using system-provided php runtime for executing magento
+    * currently uses `php -S` provided by phpbrew or homebrew
+    * supports concurrency with different versions through environment variables
+* using dockerized php runtime for executing magento
+    * should provide a default local setup with all-docker
+* dockerized backend services
+    * currently `elasticsearch` and `databases`
+    * variablized, can use any version or image of services
+    * ability to add other services through yaml
+    * expected to add `mailhog`, `ampq`, `redis`, and friends
+* `magento-cli` runs as a global cli app
+    * all yaml configurations packaged with executable
+    * `magento serve` kicks off dev instance with zero configuration
+* Documentation
+    * hugo-based documentation site hosted on [github.io](https://superterran.net/magento-cli/)
+* Available on Popular Package Managers
+    * brew (macos, linux)
+    * chocolatey (windows)?
+* Build Targets
+    * macos (arm/intel)
+    * linux (arm/intel)
+    * windows (intel)
+    * chromeos/crostini (intel and probably arm)
+
+
 # Notice
 
 This project is a prototype and isn't intended for use at this stage
