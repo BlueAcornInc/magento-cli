@@ -42,6 +42,15 @@ If you prefer to compile from source, the Makefile can be used:
     composer install
     go run .. serve
 ```
+## PHP Concurrency 
+
+Exporting the following will peg you to a specific version of php for your instance, using homebrew. This is a makeshift approach, in the future the tool will abstract this away for you. 
+
+```bash
+export MAGECLI_PHP_VERSION=8.1.6
+export MAGECLI_PHP_BIN=/opt/homebrew/Cellar/php/$MAGECLI_PHP_VERSION/bin/
+export PATH=$MAGECLI_PHP_BIN:$PATH%
+```
 
 # Contributing
 
