@@ -1,7 +1,7 @@
 baseURL = "https://superterran.net/magento-cli"
 title = "magento-cli"
 
-assetsDir = ".hugo/assets"
+assetDir = ".hugo/assets"
 layoutsDir = ".hugo/layouts"
 
 # Language settings
@@ -71,7 +71,7 @@ id = "UA-00000000-0"
 [languages]
 [languages.en]
 title = "magento-cli"
-description = "run magento natively!"
+description = "Run magento natively!"
 languageName ="English"
 # Weight used for sorting.
 weight = 1
