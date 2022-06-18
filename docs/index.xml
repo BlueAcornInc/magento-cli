@@ -1,4 +1,83 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>magento-cli – Documentation</title><link>https://superterran.net/magento-cli/docs/</link><description>Recent content in Documentation on magento-cli</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://superterran.net/magento-cli/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Project Roadmap</title><link>https://superterran.net/magento-cli/docs/overview/roadmap/</link><pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/overview/roadmap/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>magento-cli – Documentation</title><link>https://superterran.net/magento-cli/docs/</link><description>Recent content in Documentation on magento-cli</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://superterran.net/magento-cli/docs/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Homebrew</title><link>https://superterran.net/magento-cli/docs/local-php/homebrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/local-php/homebrew/</guid><description>
+&lt;p>Installing with &lt;a href="https://brew.sh/">brew&lt;/a> is the preferred way to install for most use-cases. Homebrew installs the tool globally, and is updated with every release.&lt;/p>
+&lt;h2 id="environment-variables">Environment Variables&lt;/h2>
+&lt;p>Exporting the following will peg you to a specific version of php for your instance, using homebrew. This is a makeshift approach that requires &lt;code>direnv&lt;/code> or the like, in the future the tool will abstract this away for you.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">MAGECLI_PHP_VERSION&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>8.1.6
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">MAGECLI_PHP_BIN&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>/opt/homebrew/Cellar/php/&lt;span style="color:#000">$MAGECLI_PHP_VERSION&lt;/span>/bin/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">PATH&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">$MAGECLI_PHP_BIN&lt;/span>:&lt;span style="color:#000">$PATH&lt;/span>%
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>Installing PHP with brew is easy, just trigger:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>brew install php@8.1
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>If you run &lt;code>brew link php@8.1&lt;/code> this will set it as the system-wide default. This seems like it should be fine, but keep in mind tools like &lt;code>magento-cloud&lt;/code> require PHP 7.4 at the time of this writing so having the system-wide as that version is usually simpler. See the environment variables section to set this per-directory.&lt;/p></description></item><item><title>Docs: phpbrew</title><link>https://superterran.net/magento-cli/docs/local-php/phpbrew/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/local-php/phpbrew/</guid><description>
+&lt;h2 id="enviroment-variables">Enviroment Variables&lt;/h2>
+&lt;p>This is stubbed out but hasn&amp;rsquo;t been defined yet, &lt;code>homebrew&lt;/code> is the best way to use this tool at this point.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">MAGECLI_PHP_VERSION&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>8.1.6
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">MAGECLI_PHP_BIN&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>/opt/phpbre/--fixme--/&lt;span style="color:#000">$MAGECLI_PHP_VERSION&lt;/span>/bin/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">export&lt;/span> &lt;span style="color:#000">PATH&lt;/span>&lt;span style="color:#ce5c00;font-weight:bold">=&lt;/span>&lt;span style="color:#000">$MAGECLI_PHP_BIN&lt;/span>:&lt;span style="color:#000">$PATH&lt;/span>%
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>Installing with &lt;a href="https://github.com/phpbrew/phpbrew">phpbrew&lt;/a> will also supported. This will compile php with any kind of modules or flags you need. Please review the official &lt;a href="https://github.com/phpbrew/phpbrew#getting-started">Installation Documentation&lt;/a> to set this up, but we will summerize below.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># install&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>curl -L -O https://github.com/phpbrew/phpbrew/releases/latest/download/phpbrew.phar
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>chmod +x phpbrew.phar
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#8f5902;font-style:italic"># Move the file to some directory within your $PATH&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>sudo mv phpbrew.phar /usr/local/bin/phpbrew
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>phpbrew init
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">echo&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;[[ -e ~/.phpbrew/bashrc ]] &amp;amp;&amp;amp; source ~/.phpbrew/bashrc&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.bashrc
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>phpbrew install 8.1.6 +pdo +mysql
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Contribute to Documentation</title><link>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/documentation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/documentation/</guid><description>
+&lt;h2 id="contributing-to-docs">Contributing to Docs&lt;/h2>
+&lt;p>We use &lt;a href="https://gohugo.io/">Hugo&lt;/a> to format and generate our website, the
+&lt;a href="https://github.com/google/docsy">Docsy&lt;/a> theme for styling and site structure,
+and &lt;a href="https://www.github.com/">Github Actions&lt;/a> to manage the deployment of the site.
+Hugo is an open-source static site generator that provides us with templates,
+content organisation in a standard directory structure, and a website generation
+engine. You write the pages in Markdown (or HTML if you want), and Hugo wraps them up into a website.&lt;/p>
+&lt;p>All submissions, including submissions by project members, require review. We
+use GitHub pull requests for this purpose. Consult
+&lt;a href="https://help.github.com/articles/about-pull-requests/">GitHub Help&lt;/a> for more
+information on using pull requests.&lt;/p>
+&lt;h3 id="updating-a-single-page">Updating a single page&lt;/h3>
+&lt;p>If you&amp;rsquo;ve just spotted something you&amp;rsquo;d like to change while using the docs, Docsy has a shortcut for you:&lt;/p>
+&lt;ol>
+&lt;li>Click &lt;strong>Edit this page&lt;/strong> in the top right hand corner of the page.&lt;/li>
+&lt;li>If you don&amp;rsquo;t already have an up to date fork of the project repo, you are prompted to get one - click &lt;strong>Fork this repository and propose changes&lt;/strong> or &lt;strong>Update your Fork&lt;/strong> to get an up to date version of the project to edit. The appropriate page in your fork is displayed in edit mode.&lt;/li>
+&lt;li>Follow the rest of the &lt;a href="#quick-start-with-netlify">Quick start with Netlify&lt;/a> process above to make, preview, and propose your changes.&lt;/li>
+&lt;/ol>
+&lt;h3 id="creating-an-issue">Creating an issue&lt;/h3>
+&lt;p>If you&amp;rsquo;ve found a problem in the docs, but you&amp;rsquo;re not sure how to fix it yourself, please create an issue in the &lt;a href="https://github.com/google/docsy-example/issues">Goldydocs repo&lt;/a>. You can also create an issue about a specific page by clicking the &lt;strong>Create Issue&lt;/strong> button in the top right hand corner of the page.&lt;/p>
+&lt;h3 id="useful-resources">Useful resources&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.docsy.dev/docs/">Docsy user guide&lt;/a>: All about Docsy, including how it manages navigation, look and feel, and multi-language support.&lt;/li>
+&lt;li>&lt;a href="https://gohugo.io/documentation/">Hugo documentation&lt;/a>: Comprehensive reference for Hugo.&lt;/li>
+&lt;li>&lt;a href="https://guides.github.com/activities/hello-world/">Github Hello World!&lt;/a>: A basic introduction to GitHub concepts and workflow.&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Contribue to Magento CLI</title><link>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/magento-cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/magento-cli/</guid><description>
+&lt;h2 id="contributing-to-magento-cli">Contributing to Magento CLI&lt;/h2>
+&lt;p>We love pull requests!&lt;/p>
+&lt;p>Fork, then clone the repo:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> git clone git@github.com:your-username/magento-cli.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Set up your machine:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87">cd&lt;/span> magento-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> make build
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Make sure the existing tests pass:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> make &lt;span style="color:#204a87">test&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>While creating new commands, don&amp;rsquo;t forget to create a &lt;code>_test.go&lt;/code> file.&lt;/p>
+&lt;p>Make your changes, Add tests for your change, Make the tests pass:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> make &lt;span style="color:#204a87">test&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Make your change. Add tests for your change. Make the tests pass:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> make &lt;span style="color:#204a87">test&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Push to your fork and &lt;a href="https://github.com/superterran/magento-cli/compare/">submit a pull request&lt;/a>.&lt;/p>
+&lt;p>At this point you&amp;rsquo;re waiting on us. We like to at least comment on pull requests
+within three business days (and, typically, one business day). We may suggest
+some changes or improvements or alternatives.&lt;/p>
+&lt;p>Some things that will increase the chance that your pull request is accepted:&lt;/p>
+&lt;ul>
+&lt;li>Write tests.&lt;/li>
+&lt;li>Write a &lt;a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit message&lt;/a>.&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Project Roadmap</title><link>https://superterran.net/magento-cli/docs/overview/roadmap/</link><pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/overview/roadmap/</guid><description>
 &lt;ul>
 &lt;li>Using system-provided php runtime for executing magento
 &lt;ul>
@@ -46,6 +125,6 @@
 &lt;/li>
 &lt;/ul></description></item><item><title>Docs: MacOS</title><link>https://superterran.net/magento-cli/docs/getting-started/macos/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/getting-started/macos/</guid><description>
 &lt;p>Requires &lt;code>php&lt;/code>, &lt;code>docker&lt;/code> and &lt;code>docker-compose&lt;/code>.&lt;/p>
-&lt;p>The author also uses &lt;code>direnv&lt;/code> to manage the environment variables required for use, check out &lt;code>.envrc.sample&lt;/code> for defaults.&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> brew install php@8.1 direnv
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
+&lt;p>Install &lt;code>docker&lt;/code> and &lt;code>docker-compose&lt;/code> using the &lt;a href="https://docs.docker.com/desktop/mac/install/">Docker Installation Guide&lt;/a>.&lt;/p>
+&lt;p>The author also uses &lt;a href="https://direnv.net/">direnv&lt;/a> to manage the environment variables required for use, check out &lt;code>.envrc.sample&lt;/code> for defaults.&lt;/p>
+&lt;p>Review the &lt;a href="https://superterran.net/magento-cli/magento-cli/docs/local-php/homebrew/">Homebrew Installation Article&lt;/a> for more information on how to confgiure PHP using this tool.&lt;/p></description></item></channel></rss>

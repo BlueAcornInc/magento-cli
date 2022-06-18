@@ -1,0 +1,50 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>magento-cli – Contribution Guidelines</title><link>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/</link><description>Recent content in Contribution Guidelines on magento-cli</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Contribute to Documentation</title><link>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/documentation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/documentation/</guid><description>
+&lt;h2 id="contributing-to-docs">Contributing to Docs&lt;/h2>
+&lt;p>We use &lt;a href="https://gohugo.io/">Hugo&lt;/a> to format and generate our website, the
+&lt;a href="https://github.com/google/docsy">Docsy&lt;/a> theme for styling and site structure,
+and &lt;a href="https://www.github.com/">Github Actions&lt;/a> to manage the deployment of the site.
+Hugo is an open-source static site generator that provides us with templates,
+content organisation in a standard directory structure, and a website generation
+engine. You write the pages in Markdown (or HTML if you want), and Hugo wraps them up into a website.&lt;/p>
+&lt;p>All submissions, including submissions by project members, require review. We
+use GitHub pull requests for this purpose. Consult
+&lt;a href="https://help.github.com/articles/about-pull-requests/">GitHub Help&lt;/a> for more
+information on using pull requests.&lt;/p>
+&lt;h3 id="updating-a-single-page">Updating a single page&lt;/h3>
+&lt;p>If you&amp;rsquo;ve just spotted something you&amp;rsquo;d like to change while using the docs, Docsy has a shortcut for you:&lt;/p>
+&lt;ol>
+&lt;li>Click &lt;strong>Edit this page&lt;/strong> in the top right hand corner of the page.&lt;/li>
+&lt;li>If you don&amp;rsquo;t already have an up to date fork of the project repo, you are prompted to get one - click &lt;strong>Fork this repository and propose changes&lt;/strong> or &lt;strong>Update your Fork&lt;/strong> to get an up to date version of the project to edit. The appropriate page in your fork is displayed in edit mode.&lt;/li>
+&lt;li>Follow the rest of the &lt;a href="#quick-start-with-netlify">Quick start with Netlify&lt;/a> process above to make, preview, and propose your changes.&lt;/li>
+&lt;/ol>
+&lt;h3 id="creating-an-issue">Creating an issue&lt;/h3>
+&lt;p>If you&amp;rsquo;ve found a problem in the docs, but you&amp;rsquo;re not sure how to fix it yourself, please create an issue in the &lt;a href="https://github.com/google/docsy-example/issues">Goldydocs repo&lt;/a>. You can also create an issue about a specific page by clicking the &lt;strong>Create Issue&lt;/strong> button in the top right hand corner of the page.&lt;/p>
+&lt;h3 id="useful-resources">Useful resources&lt;/h3>
+&lt;ul>
+&lt;li>&lt;a href="https://www.docsy.dev/docs/">Docsy user guide&lt;/a>: All about Docsy, including how it manages navigation, look and feel, and multi-language support.&lt;/li>
+&lt;li>&lt;a href="https://gohugo.io/documentation/">Hugo documentation&lt;/a>: Comprehensive reference for Hugo.&lt;/li>
+&lt;li>&lt;a href="https://guides.github.com/activities/hello-world/">Github Hello World!&lt;/a>: A basic introduction to GitHub concepts and workflow.&lt;/li>
+&lt;/ul></description></item><item><title>Docs: Contribue to Magento CLI</title><link>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/magento-cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/magento-cli/</guid><description>
+&lt;h2 id="contributing-to-magento-cli">Contributing to Magento CLI&lt;/h2>
+&lt;p>We love pull requests!&lt;/p>
+&lt;p>Fork, then clone the repo:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> git clone git@github.com:your-username/magento-cli.git
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Set up your machine:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87">cd&lt;/span> magento-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> make build
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Make sure the existing tests pass:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> make &lt;span style="color:#204a87">test&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>While creating new commands, don&amp;rsquo;t forget to create a &lt;code>_test.go&lt;/code> file.&lt;/p>
+&lt;p>Make your changes, Add tests for your change, Make the tests pass:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> make &lt;span style="color:#204a87">test&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Make your change. Add tests for your change. Make the tests pass:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> make &lt;span style="color:#204a87">test&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Push to your fork and &lt;a href="https://github.com/superterran/magento-cli/compare/">submit a pull request&lt;/a>.&lt;/p>
+&lt;p>At this point you&amp;rsquo;re waiting on us. We like to at least comment on pull requests
+within three business days (and, typically, one business day). We may suggest
+some changes or improvements or alternatives.&lt;/p>
+&lt;p>Some things that will increase the chance that your pull request is accepted:&lt;/p>
+&lt;ul>
+&lt;li>Write tests.&lt;/li>
+&lt;li>Write a &lt;a href="http://tbaggery.com/2008/04/19/a-note-about-git-commit-messages.html">good commit message&lt;/a>.&lt;/li>
+&lt;/ul></description></item></channel></rss>

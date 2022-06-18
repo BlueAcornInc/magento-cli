@@ -1,0 +1,26 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>magento-cli – Getting Started</title><link>https://superterran.net/magento-cli/categories/getting-started/</link><description>Recent content in Getting Started on magento-cli</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://superterran.net/magento-cli/categories/getting-started/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Getting Started</title><link>https://superterran.net/magento-cli/docs/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/getting-started/</guid><description>
+&lt;h2 id="prerequisites">Prerequisites&lt;/h2>
+&lt;p>Magento CLI is designed to work wtih &lt;code>docker&lt;/code> and &lt;code>docker-compose&lt;/code>, and requires a locally installed verison of &lt;code>php&lt;/code> to use the built-in php server. If you are running php locally, you will also need to provide tools like &lt;code>composer&lt;/code>.&lt;/p>
+&lt;h2 id="installation">Installation&lt;/h2>
+&lt;p>Binaries are compiled with every release, you can grab it from the &lt;a href="https://github.com/superterran/magento-cli/releases/">releases&lt;/a> page, and use it as-is. These files are fit to be ran directly, from $PATH, or even committed i.e. &lt;code>/path/to/iac-repo/bin/magento-cli&lt;/code> and invoked with &lt;code>cd /path/to/iac-repo/ &amp;amp;&amp;amp; bin/magento-cli&lt;/code>.&lt;/p>
+&lt;h3 id="homebrew">Homebrew&lt;/h3>
+&lt;p>Installing with &lt;a href="https://brew.sh/">brew&lt;/a> is the preferred way to install for most use-cases. Homebrew installs the tool globally, and is updated with every release.&lt;/p>
+&lt;pre tabindex="0">&lt;code class="language-/bin/bash" data-lang="/bin/bash"> brew tap superterran/magento-cli
+brew install magento-cli
+&lt;/code>&lt;/pre>&lt;h3 id="compiling-from-source">Compiling From Source&lt;/h3>
+&lt;p>If you prefer to compile from source, the Makefile can be used:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> git clone git@github.com:superterran/magento-cli.git
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87">cd&lt;/span> magento-cli
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> make install &lt;span style="color:#8f5902;font-style:italic"># runs `go build .` and copies to /usr/local/bin&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="running-source-locally">Running Source Locally&lt;/h3>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87">cd&lt;/span> example/
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> composer install
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> go run .. serve
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h2 id="try-it-out">Try it out!&lt;/h2>
+&lt;p>Once installed, you can test out the tool against any project!&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">cd&lt;/span> example
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>composer install &lt;span style="color:#8f5902;font-style:italic"># lets install the php deps&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>magento install &lt;span style="color:#8f5902;font-style:italic"># runs setup:install and creates config.php and env.php&lt;/span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
+&lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>magento serve &lt;span style="color:#8f5902;font-style:italic"># That&amp;#39;s it!&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item></channel></rss>
