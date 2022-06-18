@@ -1,9 +1,6 @@
 baseURL = "https://superterran.net/magento-cli"
 title = "magento-cli"
 
-assetDir = ".hugo/assets"
-layoutsDir = ".hugo/layouts"
-
 # Language settings
 contentDir = "content/en"
 defaultContentLanguage = "en"
