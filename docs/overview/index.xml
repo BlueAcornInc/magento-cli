@@ -1,0 +1,47 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>magento-cli – Overview</title><link>https://superterran.net/magento-cli/docs/overview/</link><description>Recent content in Overview on magento-cli</description><generator>Hugo -- gohugo.io</generator><atom:link href="https://superterran.net/magento-cli/docs/overview/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Project Roadmap</title><link>https://superterran.net/magento-cli/docs/overview/roadmap/</link><pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/overview/roadmap/</guid><description>
+&lt;ul>
+&lt;li>Using system-provided php runtime for executing magento
+&lt;ul>
+&lt;li>currently uses &lt;code>php -S&lt;/code> provided by phpbrew or homebrew&lt;/li>
+&lt;li>supports concurrency with different versions through environment variables&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>using dockerized php runtime for executing magento
+&lt;ul>
+&lt;li>should provide a default local setup with all-docker&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>dockerized backend services
+&lt;ul>
+&lt;li>currently &lt;code>elasticsearch&lt;/code> and &lt;code>databases&lt;/code>&lt;/li>
+&lt;li>variablized, can use any version or image of services&lt;/li>
+&lt;li>ability to add other services through yaml&lt;/li>
+&lt;li>expected to add &lt;code>mailhog&lt;/code>, &lt;code>ampq&lt;/code>, &lt;code>redis&lt;/code>, and friends&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;code>magento-cli&lt;/code> runs as a global cli app
+&lt;ul>
+&lt;li>all yaml configurations packaged with executable&lt;/li>
+&lt;li>&lt;code>magento serve&lt;/code> kicks off dev instance with zero configuration&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Documentation
+&lt;ul>
+&lt;li>hugo-based documentation site hosted on &lt;a href="https://superterran.net/magento-cli/">github.io&lt;/a>&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Available on Popular Package Managers
+&lt;ul>
+&lt;li>brew (macos, linux)&lt;/li>
+&lt;li>chocolatey (windows)?&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>Build Targets
+&lt;ul>
+&lt;li>macos (arm/intel)&lt;/li>
+&lt;li>linux (arm/intel)&lt;/li>
+&lt;li>windows (intel)&lt;/li>
+&lt;li>chromeos/crostini (intel and probably arm)&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;/ul></description></item></channel></rss>
