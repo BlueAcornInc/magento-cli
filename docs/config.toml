@@ -64,7 +64,7 @@ anchor = "smart"
 [services]
 [services.googleAnalytics]
 # Comment out the next line to disable GA tracking. Also disables the feature described in [params.ui.feedback].
-id = "UA-00000000-0"
+id = "G-SKSP40VDN9"
 
 # Language configuration
 
@@ -108,8 +108,8 @@ weight = 1
 section = ["HTML", "print", "RSS"]
 
 [params]
-copyright = "Blue Acorn iCi"
-privacy_policy = "https://policies.google.com/privacy"
+copyright = "Doug Hatcher"
+privacy_policy = "https://github.com/superterran/magento-cli/blob/main/LICENSE"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -145,7 +145,7 @@ github_project_repo = "https://github.com/superterran/magento-cli"
 github_branch= "main"
 
 # Google Custom Search Engine ID. Remove or comment out to disable search.
-gcs_engine_id = "d72aa9b2712488cc3"
+gcs_engine_id = "24addb697b57b42f0" # https://programmablesearchengine.google.com/controlpanel/overview?cx=24addb697b57b42f0
 
 # Enable Algolia DocSearch
 algolia_docsearch = false
@@ -163,7 +163,7 @@ breadcrumb_disable = false
 # Set to true to disable the About link in the site footer
 footer_about_disable = false
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
-navbar_logo = true
+navbar_logo = false
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
 navbar_translucent_over_cover_disable = false
 # Enable to show the side bar menu in its compact state.
