@@ -1,0 +1,68 @@
++++
+title = "magento-cli"
+linkTitle = "magento-cli"
+
++++
+
+{{< blocks/cover title="magento-cli" image_anchor="top" height="full" color="orange" >}}
+<div class="mx-auto">
+	<a class="btn btn-lg btn-primary mr-3 mb-4" href="{{< relref "/docs" >}}">
+		Learn More <i class="fas fa-arrow-alt-circle-right ml-2"></i>
+	</a>
+	<a class="btn btn-lg btn-secondary mr-3 mb-4" href="https://github.com/superterran/magento-cli/releases">
+		Download <i class="fab fa-github ml-2 "></i>
+	</a>
+	<p class="lead mt-5">Quickly and easily run Adobe Commerce or Magento without all the hassles!</p>
+	{{< blocks/link-down color="info" >}}
+</div>
+{{< /blocks/cover >}}
+
+
+{{% blocks/lead color="primary" %}}
+Magento-cli provides a globally-installed cli tool for managing magento locally. This includes serving it locally (`magento serve`), and helpers to install magento. As well as convienences to other tools, such as `magento sql` to access `mysql-cli`, and to install `composer` and `n98-magerun2`. This tool also passes through commands to the `bin/magento` tool in the working directory, allowing it to serve as a one-stop magento shop.
+{{% /blocks/lead %}}
+
+{{< blocks/section color="dark" >}}
+
+
+{{% blocks/feature icon="fab fa-magento" title="Run Magento Natively or with Docker!" %}}
+magneto-cli supports using php's built-in php server, or a fully dockerized set of services. 
+
+{{% /blocks/feature %}}
+
+
+{{% blocks/feature icon="fab fa-github" title="Contributions welcome!" url="https://github.com/google/docsy-example" %}}
+We do a [Pull Request](https://github.com/google/docsy-example/pulls) contributions workflow on **GitHub**. New users are always welcome!
+{{% /blocks/feature %}}
+
+
+{{% blocks/feature icon="fa fa-lightbulb" title="Written by experts!" %}}
+Written with care for developers by the worlds best Adobe Commerce Agency!
+{{% /blocks/feature %}}
+
+
+{{< /blocks/section >}}
+
+{{% blocks/lead color="red" %}}
+
+<h1 class="text-center">Warning</h1>
+
+This project is a prototype and is not ready for use! See the in-repo <a href="https://github.com/superterran/magento-cli/tree/main/example">example</a> to test!
+
+{{% /blocks/lead %}}
+
+
+{{< blocks/section >}}
+<div class="col">	
+
+<h1 class="text-center">Rationale</h1>
+<p>Docker is typically the preferred method for running Magento locally. It's great because it lets you containerize all the services required to run Magento, and even run them concurrently using a reverse proxy like traefik with goodies like tls and all that.</p> 
+
+<p>On Linux, docker works exceptionally well with near-native performance. On other platforms, however, it's typical for docker to run within a VM which significantly impacts performance. On these platforms, there's typically a lot of performance lost through volume mounting (the Magento codebase is hundreds of megs of small text files). This can be relieved somewhat with `mutagen`, a file syncing service that copies files back and forth between your local and the container - causing a delay in updates and frustration when things don't reflect on the frontend. Further still, when the docker service containers aren't compiled for your system arch (M1/ARM7/x64) the performance losses mounts.</p>
+
+<p>Considering other popular languages and frameworks, like this `hugo` documentation site as an example, it's written in golang and when you want to serve the blog locally, you run `hugo serve` which spawns a web server and provides a url. `pwa-studio` works the same way with `webpack`, it's a popular convention. Let's provide the same convention, and support using php's built-in web server as a way to serve Magento. We can still provide docker-backed services, even a php-fpm service (with mutagen, if you insist) to round things out. But this project differentiates from others because it has first-class support for pre-compiled php binaries. These are provided by `brew` and `phpbrew` by the way, easy to install, you can still run multiple php versions concurrently, and they are substantially faster than running it in a multi-arch docker container.</p>
+
+
+</div>
+
+{{< /blocks/section >}}
