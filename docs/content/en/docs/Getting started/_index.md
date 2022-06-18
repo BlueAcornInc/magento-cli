@@ -1,6 +1,6 @@
 ---
-categories: ["Examples", "Placeholders"]
-tags: ["test","docs"] 
+categories: ["Getting Started"]
+tags: [] 
 title: "Getting Started"
 linkTitle: "Getting Started"
 weight: 2
@@ -8,30 +8,50 @@ description: >
   Getting started with Magento CLI and running things locally
 ---
 
-{{% pageinfo %}}
-This is a placeholder page that shows you how to use this template site.
-{{% /pageinfo %}}
-
-Information in this section helps your user try your project themselves.
-
-* What do your users need to do to start using your project? This could include downloading/installation instructions, including any prerequisites or system requirements.
-
-* Introductory “Hello World” example, if appropriate. More complex tutorials should live in the Tutorials section.
-
-Consider using the headings below for your getting started page. You can delete any that are not applicable to your project.
-
 ## Prerequisites
 
-Are there any system requirements for using your project? What languages are supported (if any)? Do users need to already have any software or tools installed?
+Magento CLI is designed to work wtih `docker` and `docker-compose`, and requires a locally installed verison of `php` to use the built-in php server. If you are running php locally, you will also need to provide tools like `composer`.
+
 
 ## Installation
 
-Where can your user find your project code? How can they install it (binaries, installable package, build from source)? Are there multiple options/versions they can install and how should they choose the right one for them?
+Binaries are compiled with every release, you can grab it from the [releases](https://github.com/superterran/magento-cli/releases/) page, and use it as-is. These files are fit to be ran directly, from $PATH, or even committed i.e. `/path/to/iac-repo/bin/magento-cli` and invoked with `cd /path/to/iac-repo/ && bin/magento-cli`.
 
-## Setup
+### Homebrew
 
-Is there any initial setup users need to do after installation to try your project?
+Installing with [brew](https://brew.sh/) is the preferred way to install for most use-cases. Homebrew installs the tool globally, and is updated with every release. 
+
+```/bin/bash
+    brew tap superterran/magento-cli
+    brew install magento-cli
+```
+
+### Compiling From Source
+
+If you prefer to compile from source, the Makefile can be used:
+
+```bash
+    git clone git@github.com:superterran/magento-cli.git 
+    cd magento-cli
+    make install # runs `go build .` and copies to /usr/local/bin
+```
+
+### Running Source Locally
+
+```bash
+    cd example/
+    composer install
+    go run .. serve
+```
 
 ## Try it out!
 
-Can your users test their installation, for example by running a command or deploying a Hello World example?
+Once installed, you can test out the tool against any project!
+
+```bash
+cd example
+composer install # lets install the php deps
+magento install # runs setup:install and creates config.php and env.php
+
+magento serve # That's it!
+```

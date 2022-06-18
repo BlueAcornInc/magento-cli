@@ -1,7 +1,8 @@
 # Example Installation
 
 This directory provides a working example of a Magento installation. You can run the uncompiled version
-of magento-cli against this directory to work on the tool. 
+of magento-cli against this directory to work on the tool.
+
 
 ```bash
 $ cd example
