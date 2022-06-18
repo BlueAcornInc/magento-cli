@@ -26,7 +26,9 @@ lcov: coverage ## lcov formatted test files for ide interpretation
 	gcov2lcov -infile=coverage.txt -outfile=coverage/lcov-vscode.info
 lcov-deps: ## install dependancies for gcov2lcov
 	go get -u github.com/jandelgado/gcov2lcov
-docs-build: ## installs docs dependancies
+docs-install: ## installs docs dependancies
 	cd docs/ && npm install
-docs-serve: docs-build ## builds and serves docs
+docs-build: docs-install ## builds the docs instance
+	cd docs/ && hugo --minify
+docs-serve: docs-install ## builds and serves docs
 	cd docs/ && npx hugo serve
