@@ -6,6 +6,8 @@ of magento-cli against this directory to work on the tool.
 
 ```bash
 $ cd example
+$ composer install # must install magento before you can serve
+$ go run .. install # install magento before serving
 $ go run .. serve
 
 loading config file magento-cli.yaml... done
