@@ -28,7 +28,7 @@
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>&lt;span style="color:#204a87">echo&lt;/span> &lt;span style="color:#4e9a06">&amp;#34;[[ -e ~/.phpbrew/bashrc ]] &amp;amp;&amp;amp; source ~/.phpbrew/bashrc&amp;#34;&lt;/span> &amp;gt;&amp;gt; ~/.bashrc
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span>phpbrew install 8.1.6 +pdo +mysql
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Contribute to Documentation</title><link>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/documentation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/documentation/</guid><description>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div></description></item><item><title>Docs: Contribute to Documentation</title><link>https://superterran.net/magento-cli/docs/developers-guide/contribute/documentation/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/developers-guide/contribute/documentation/</guid><description>
 &lt;h2 id="contributing-to-docs">Contributing to Docs&lt;/h2>
 &lt;p>We use &lt;a href="https://gohugo.io/">Hugo&lt;/a> to format and generate our website, the
 &lt;a href="https://github.com/google/docsy">Docsy&lt;/a> theme for styling and site structure,
@@ -54,7 +54,7 @@ information on using pull requests.&lt;/p>
 &lt;li>&lt;a href="https://www.docsy.dev/docs/">Docsy user guide&lt;/a>: All about Docsy, including how it manages navigation, look and feel, and multi-language support.&lt;/li>
 &lt;li>&lt;a href="https://gohugo.io/documentation/">Hugo documentation&lt;/a>: Comprehensive reference for Hugo.&lt;/li>
 &lt;li>&lt;a href="https://guides.github.com/activities/hello-world/">Github Hello World!&lt;/a>: A basic introduction to GitHub concepts and workflow.&lt;/li>
-&lt;/ul></description></item><item><title>Docs: Contribue to Magento CLI</title><link>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/magento-cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/developers-guide/contribution-guidelines/magento-cli/</guid><description>
+&lt;/ul></description></item><item><title>Docs: Contribue to Magento CLI</title><link>https://superterran.net/magento-cli/docs/developers-guide/contribute/magento-cli/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/developers-guide/contribute/magento-cli/</guid><description>
 &lt;h2 id="contributing-to-magento-cli">Contributing to Magento CLI&lt;/h2>
 &lt;p>We love pull requests!&lt;/p>
 &lt;p>Fork, then clone the repo:&lt;/p>
