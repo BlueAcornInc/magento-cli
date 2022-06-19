@@ -30,10 +30,6 @@ tasks:
       type: string
       description: default currency
       default: USD
-    - name: currency
-      type: string
-      description: default currency
-      default: USD
     - name: timezone
       type: string
       description: default timezone
