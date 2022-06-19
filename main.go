@@ -34,12 +34,13 @@ var yamlExt string = ".yaml"
 var configDir string = ".magento-cli"
 
 func main() {
-
+	// put services files in a temp directory
 	extractYamlToTemp(services)
 
 	// feeds configuration into paraser and executes
 	cmd.YAML(string(loadYaml(tasks)))
 
+	// clean teh temp diretory
 	rmTemp()
 }
 
