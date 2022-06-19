@@ -11,6 +11,7 @@ package main
 
 import (
 	"embed"
+	"fmt"
 	"io/fs"
 	"io/ioutil"
 	"log"
@@ -19,6 +20,8 @@ import (
 
 	"github.com/mumoshu/variant/cmd"
 )
+
+var tempDir string
 
 //go:embed tasks/*.yaml
 var tasks embed.FS
@@ -32,8 +35,64 @@ var configDir string = ".magento-cli"
 
 func main() {
 
+	extractYamlToTemp(services)
+
 	// feeds configuration into paraser and executes
 	cmd.YAML(string(loadYaml(tasks)))
+
+	rmTemp()
+}
+
+func extractYamlToTemp(objects embed.FS) {
+
+	tempDir, err := ioutil.TempDir("/tmp", configDir+"-")
+	if err != nil {
+		log.Fatal(err)
+	}
+
+	// fetches basic configuration, this uses embed.FS and sources from ./<objects>/
+	fs.WalkDir(objects, ".", func(path string, d fs.DirEntry, err error) error {
+		if err != nil {
+			return err
+		}
+
+		// fmt.Printf("path=%q, isDir=%v\n", path, d.IsDir())
+		if !d.IsDir() == true {
+
+			content, err := fs.ReadFile(objects, path)
+			if err == nil {
+
+				filename := tempDir + "/" + path
+
+				_ = os.MkdirAll(filepath.Dir(filename), 0700)
+				f, err := os.Create(tempDir + "/" + path)
+				if err != nil {
+					fmt.Println(err)
+					return nil
+				}
+				_, err = f.WriteString(string(content))
+				if err != nil {
+					fmt.Println(err)
+					f.Close()
+					return nil
+				}
+				err = f.Close()
+				if err != nil {
+					fmt.Println(err)
+					return nil
+				}
+			}
+
+		}
+
+		return nil
+
+	})
+}
+
+func rmTemp() {
+
+	defer os.RemoveAll(tempDir)
 }
 
 func loadYaml(objects embed.FS) string {
