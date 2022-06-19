@@ -1,4 +1,4 @@
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>magento-cli – roadmap</title><link>https://superterran.net/magento-cli/tags/roadmap/</link><description>Recent content in roadmap on magento-cli</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 18 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://superterran.net/magento-cli/tags/roadmap/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Project Roadmap</title><link>https://superterran.net/magento-cli/docs/overview/roadmap/</link><pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate><guid>https://superterran.net/magento-cli/docs/overview/roadmap/</guid><description>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>magento-cli – roadmap</title><link>https://blueacorninc.github.io/magento-cli/tags/roadmap/</link><description>Recent content in roadmap on magento-cli</description><generator>Hugo -- gohugo.io</generator><lastBuildDate>Sat, 18 Jun 2022 00:00:00 +0000</lastBuildDate><atom:link href="https://blueacorninc.github.io/magento-cli/tags/roadmap/index.xml" rel="self" type="application/rss+xml"/><item><title>Docs: Project Roadmap</title><link>https://blueacorninc.github.io/magento-cli/docs/overview/roadmap/</link><pubDate>Sat, 18 Jun 2022 00:00:00 +0000</pubDate><guid>https://blueacorninc.github.io/magento-cli/docs/overview/roadmap/</guid><description>
 &lt;ul>
 &lt;li>Using system-provided php runtime for executing magento
 &lt;ul>
@@ -27,7 +27,7 @@
 &lt;/li>
 &lt;li>Documentation
 &lt;ul>
-&lt;li>hugo-based documentation site hosted on &lt;a href="https://superterran.net/magento-cli/">github.io&lt;/a>&lt;/li>
+&lt;li>hugo-based documentation site hosted on &lt;a href="https://blueacorninc.github.io/magento-cli/">github.io&lt;/a>&lt;/li>
 &lt;/ul>
 &lt;/li>
 &lt;li>Available on Popular Package Managers
