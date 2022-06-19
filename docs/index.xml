@@ -69,7 +69,7 @@ information on using pull requests.&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> make &lt;span style="color:#204a87">test&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Make your change. Add tests for your change. Make the tests pass:&lt;/p>
 &lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> make &lt;span style="color:#204a87">test&lt;/span>
-&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Push to your fork and &lt;a href="https://github.com/superterran/magento-cli/compare/">submit a pull request&lt;/a>.&lt;/p>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>Push to your fork and &lt;a href="https://github.com/blueacorninc/magento-cli/compare/">submit a pull request&lt;/a>.&lt;/p>
 &lt;p>At this point you&amp;rsquo;re waiting on us. We like to at least comment on pull requests
 within three business days (and, typically, one business day). We may suggest
 some changes or improvements or alternatives.&lt;/p>

@@ -2,14 +2,14 @@
 &lt;h2 id="prerequisites">Prerequisites&lt;/h2>
 &lt;p>Magento CLI is designed to work wtih &lt;code>docker&lt;/code> and &lt;code>docker-compose&lt;/code>, and requires a locally installed verison of &lt;code>php&lt;/code> to use the built-in php server. If you are running php locally, you will also need to provide tools like &lt;code>composer&lt;/code>.&lt;/p>
 &lt;h2 id="installation">Installation&lt;/h2>
-&lt;p>Binaries are compiled with every release, you can grab it from the &lt;a href="https://github.com/superterran/magento-cli/releases/">releases&lt;/a> page, and use it as-is. These files are fit to be ran directly, from $PATH, or even committed i.e. &lt;code>/path/to/iac-repo/bin/magento-cli&lt;/code> and invoked with &lt;code>cd /path/to/iac-repo/ &amp;amp;&amp;amp; bin/magento-cli&lt;/code>.&lt;/p>
+&lt;p>Binaries are compiled with every release, you can grab it from the &lt;a href="https://github.com/blueacorninc/magento-cli/releases/">releases&lt;/a> page, and use it as-is. These files are fit to be ran directly, from $PATH, or even committed i.e. &lt;code>/path/to/iac-repo/bin/magento-cli&lt;/code> and invoked with &lt;code>cd /path/to/iac-repo/ &amp;amp;&amp;amp; bin/magento-cli&lt;/code>.&lt;/p>
 &lt;h3 id="homebrew">Homebrew&lt;/h3>
 &lt;p>Installing with &lt;a href="https://brew.sh/">brew&lt;/a> is the preferred way to install for most use-cases. Homebrew installs the tool globally, and is updated with every release.&lt;/p>
-&lt;pre tabindex="0">&lt;code class="language-/bin/bash" data-lang="/bin/bash"> brew tap superterran/magento-cli
+&lt;pre tabindex="0">&lt;code class="language-/bin/bash" data-lang="/bin/bash"> brew tap blueacorninc/magento-cli
 brew install magento-cli
 &lt;/code>&lt;/pre>&lt;h3 id="compiling-from-source">Compiling From Source&lt;/h3>
 &lt;p>If you prefer to compile from source, the Makefile can be used:&lt;/p>
-&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> git clone git@github.com:superterran/magento-cli.git
+&lt;div class="highlight">&lt;pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;">&lt;code class="language-bash" data-lang="bash">&lt;span style="display:flex;">&lt;span> git clone git@github.com:blueacorninc/magento-cli.git
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> &lt;span style="color:#204a87">cd&lt;/span> magento-cli
 &lt;/span>&lt;/span>&lt;span style="display:flex;">&lt;span> make install &lt;span style="color:#8f5902;font-style:italic"># runs `go build .` and copies to /usr/local/bin&lt;/span>
 &lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;h3 id="running-source-locally">Running Source Locally&lt;/h3>
