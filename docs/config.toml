@@ -1,4 +1,4 @@
-baseURL = "https://superterran.net/magento-cli"
+baseURL = "https://blueacorninc.github.io/magento-cli"
 title = "magento-cli"
 
 # Language settings
@@ -105,8 +105,8 @@ weight = 1
 section = ["HTML", "print", "RSS"]
 
 [params]
-copyright = "Doug Hatcher"
-privacy_policy = "https://github.com/superterran/magento-cli/blob/main/LICENSE"
+copyright = "Blue Acorn iCi x Infosys"
+privacy_policy = "https://github.com/blueacornici/magento-cli/blob/main/LICENSE"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
@@ -127,12 +127,12 @@ version = "0.0"
 
 # A link to latest version of the docs. Used in the "version-banner" partial to
 # point people to the main doc site.
-url_latest_version = "https://superterran.net/magento-cli/docs/"
+url_latest_version = "https://blueacorninc.github.io/magento-cli/docs/"
 
 # Repository configuration (URLs for in-page links to opening issues and suggesting changes)
-github_repo = "https://github.com/superterran/magento-cli"
+github_repo = "https://github.com/blueacornici/magento-cli"
 # An optional link to a related project repo. For example, the sibling repository where your product code lives.
-github_project_repo = "https://github.com/superterran/magento-cli"
+github_project_repo = "https://github.com/blueacornici/magento-cli"
 
 # Specify a value here if your content directory is not in your repo's root directory
 # github_subdir = ""
@@ -160,7 +160,7 @@ breadcrumb_disable = false
 # Set to true to disable the About link in the site footer
 footer_about_disable = false
 # Set to false if you don't want to display a logo (/assets/icons/logo.svg) in the top navbar
-navbar_logo = false
+navbar_logo = true
 # Set to true if you don't want the top navbar to be translucent when over a `block/cover`, like on the homepage.
 navbar_translucent_over_cover_disable = false
 # Enable to show the side bar menu in its compact state.
@@ -173,10 +173,10 @@ sidebar_search_disable = false
 # If you want this feature, but occasionally need to remove the "Feedback" section from a single page,
 # add "hide_feedback: true" to the page's front matter.
 [params.ui.feedback]
-enable = true
+enable = false
 # The responses that the user sees after clicking "yes" (the page was helpful) or "no" (the page was not helpful).
-yes = 'Glad to hear it! Please <a href="https://github.com/superterran/magento-cli/issues/new">tell us how we can improve</a>.'
-no = 'Sorry to hear that. Please <a href="https://github.com/superterran/magento-cli/issues/new">tell us how we can improve</a>.'
+yes = 'Glad to hear it! Please <a href="https://github.com/blueacornici/magento-cli/issues/new">tell us how we can improve</a>.'
+no = 'Sorry to hear that. Please <a href="https://github.com/blueacornici/magento-cli/issues/new">tell us how we can improve</a>.'
 
 # Adds a reading time to the top of each doc.
 # If you want this feature, but occasionally need to remove the Reading time from a single page, 
@@ -204,9 +204,9 @@ enable = false
 # Developer relevant links. These will show up on right side of footer and in the community page if you have one.
 [[params.links.developer]]
   name = "GitHub"
-  url = "https://github.com/superterran/magento-cli"
+  url = "https://github.com/blueacornici/magento-cli"
   icon = "fab fa-github"
-  desc = "Development takes place here!"
+  desc = "Check out the project!"
 # [[params.links.developer]]
 #   name = "Slack"
 #   url = "https://example.org/slack"

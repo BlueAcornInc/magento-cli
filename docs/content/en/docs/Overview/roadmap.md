@@ -22,7 +22,7 @@ description: >
     * all yaml configurations packaged with executable
     * `magento serve` kicks off dev instance with zero configuration
 * Documentation
-    * hugo-based documentation site hosted on [github.io](https://superterran.net/magento-cli/)
+    * hugo-based documentation site hosted on [github.io](https://blueacorninc.github.io/magento-cli/)
 * Available on Popular Package Managers
     * brew (macos, linux)
     * chocolatey (windows)?
