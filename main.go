@@ -20,9 +20,11 @@ import (
 	"github.com/mumoshu/variant/cmd"
 )
 
-// content holds our static web server content.
 //go:embed tasks/*.yaml
 var tasks embed.FS
+
+//go:embed services/*.yaml
+var services embed.FS
 
 var yamlExt string = ".yaml"
 
@@ -30,17 +32,23 @@ var configDir string = ".magento-cli"
 
 func main() {
 
+	// feeds configuration into paraser and executes
+	cmd.YAML(string(loadYaml(tasks)))
+}
+
+func loadYaml(objects embed.FS) string {
+
 	data := ""
 
-	// fetches basic configuration, this uses embed.FS and sources from ./tasks/
-	fs.WalkDir(tasks, ".", func(path string, d fs.DirEntry, err error) error {
+	// fetches basic configuration, this uses embed.FS and sources from ./<objects>/
+	fs.WalkDir(objects, ".", func(path string, d fs.DirEntry, err error) error {
 		if err != nil {
 			return err
 		}
 
 		// fmt.Printf("path=%q, isDir=%v\n", path, d.IsDir())
 
-		content, err := fs.ReadFile(tasks, path)
+		content, err := fs.ReadFile(objects, path)
 		if err == nil {
 			data = data + string(content) + "\n"
 		}
@@ -67,7 +75,6 @@ func main() {
 		}
 	}
 
-	// feeds configuration into paraser and executes
-	text := string(data)
-	cmd.YAML(text)
+	return data
+
 }
