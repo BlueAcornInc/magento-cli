@@ -106,7 +106,7 @@ section = ["HTML", "print", "RSS"]
 
 [params]
 copyright = "Blue Acorn iCi x Infosys"
-privacy_policy = "https://github.com/BlueAcornInc/magento-cli/blob/main/LICENSE"
+privacy_policy = "https://www.blueacornici.com/privacy-policy/"
 
 # First one is picked as the Twitter card image if not set on page.
 # images = ["images/project-illustration.png"]
