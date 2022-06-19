@@ -15,14 +15,14 @@ Magento CLI is designed to work wtih `docker` and `docker-compose`, and requires
 
 ## Installation
 
-Binaries are compiled with every release, you can grab it from the [releases](https://github.com/superterran/magento-cli/releases/) page, and use it as-is. These files are fit to be ran directly, from $PATH, or even committed i.e. `/path/to/iac-repo/bin/magento-cli` and invoked with `cd /path/to/iac-repo/ && bin/magento-cli`.
+Binaries are compiled with every release, you can grab it from the [releases](https://github.com/blueacorninc/magento-cli/releases/) page, and use it as-is. These files are fit to be ran directly, from $PATH, or even committed i.e. `/path/to/iac-repo/bin/magento-cli` and invoked with `cd /path/to/iac-repo/ && bin/magento-cli`.
 
 ### Homebrew
 
 Installing with [brew](https://brew.sh/) is the preferred way to install for most use-cases. Homebrew installs the tool globally, and is updated with every release. 
 
 ```/bin/bash
-    brew tap superterran/magento-cli
+    brew tap blueacorninc/magento-cli
     brew install magento-cli
 ```
 
@@ -31,7 +31,7 @@ Installing with [brew](https://brew.sh/) is the preferred way to install for mos
 If you prefer to compile from source, the Makefile can be used:
 
 ```bash
-    git clone git@github.com:superterran/magento-cli.git 
+    git clone git@github.com:blueacorninc/magento-cli.git 
     cd magento-cli
     make install # runs `go build .` and copies to /usr/local/bin
 ```

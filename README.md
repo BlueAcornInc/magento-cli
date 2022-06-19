@@ -1,27 +1,27 @@
 # magento-cli
 
 [Documentation](https://superterran.net/magento-cli) |
-[Discussions](https://github.com/superterran/magento-cli/discussions) |
+[Discussions](https://github.com/blueacorninc/magento-cli/discussions) |
 [Twitter](https://twitter.com/superterran) |
 [Contribution Guide](CONTRIBUTING.md)
 
 Running magento and adobe commerce locally with a cli tool
 
-[![GoDoc](https://godoc.org/github.com/gohugoio/hugo?status.svg)](https://pkg.go.dev/github.com/superterran/magento-cli)
-[![Go](https://github.com/superterran/magento-cli/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/superterran/magento-cli/actions/workflows/go.yml) 
-[![Go Report Card](https://goreportcard.com/badge/github.com/superterran/magento-cli)](https://goreportcard.com/report/github.com/superterran/magneto-cli)
-[![codecov](https://codecov.io/gh/superterran/magento-cli/branch/main/graph/badge.svg?token=S48U2MJP9I)](https://codecov.io/gh/superterran/magento-cli)
+[![GoDoc](https://godoc.org/github.com/gohugoio/hugo?status.svg)](https://pkg.go.dev/github.com/blueacorninc/magento-cli)
+[![Go](https://github.com/blueacorninc/magento-cli/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/blueacorninc/magento-cli/actions/workflows/go.yml) 
+[![Go Report Card](https://goreportcard.com/badge/github.com/blueacorninc/magento-cli)](https://goreportcard.com/report/github.com/blueacorninc/magneto-cli)
+[![codecov](https://codecov.io/gh/blueacorninc/magento-cli/branch/main/graph/badge.svg?token=S48U2MJP9I)](https://codecov.io/gh/blueacorninc/magento-cli)
 
 # Installation 
 
-Binaries are compiled with every release, you can grab it from the [releases](https://github.com/superterran/magento-cli/releases/) page, and use it as-is. These files are fit to be ran directly, from $PATH, or even committed i.e. `/path/to/iac-repo/bin/magento-cli` and invoked with `cd /path/to/iac-repo/ && bin/magento-cli`.
+Binaries are compiled with every release, you can grab it from the [releases](https://github.com/blueacorninc/magento-cli/releases/) page, and use it as-is. These files are fit to be ran directly, from $PATH, or even committed i.e. `/path/to/iac-repo/bin/magento-cli` and invoked with `cd /path/to/iac-repo/ && bin/magento-cli`.
 
 ## Homebrew
 
 Installing with [brew](https://brew.sh/) is the preferred way to install for most use-cases. Homebrew installs the tool globally, and is updated with every release. 
 
 ```/bin/bash
-    brew tap superterran/magento-cli
+    brew tap blueacorninc/magento-cli
     brew install magento-cli
 ```
 
@@ -30,7 +30,7 @@ Installing with [brew](https://brew.sh/) is the preferred way to install for mos
 If you prefer to compile from source, the Makefile can be used:
 
 ```bash
-    git clone git@github.com:superterran/magento-cli.git 
+    git clone git@github.com:blueacorninc/magento-cli.git 
     cd magento-cli
     make install # runs `go build .` and copies to /usr/local/bin
 ```
@@ -56,7 +56,7 @@ export PATH=$MAGECLI_PHP_BIN:$PATH%
 
 For a complete guide to contributing to magento-cli, see the [Contribution Guide](CONTRIBUTING.md)
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/superterran/magento-cli/issues. 
+Bug reports and pull requests are welcome on GitHub at https://github.com/blueacorninc/magento-cli/issues. 
 
 # License
 Mach is released under the [MIT License](LICENSE)

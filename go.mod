@@ -1,4 +1,4 @@
-module github.com/superterran/magento-cli
+module github.com/blueacorninc/magento-cli
 
 go 1.17
 
