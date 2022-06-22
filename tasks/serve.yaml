@@ -1,6 +1,5 @@
 #!/usr/bin/env variant
 tasks:
-  serve:
-    parameters: *global-parameters
+  serve: 
     script: |
       echo {{ index .args }} php -S {{ get "host" }}:{{ get "port" }} -t {{ get "routes" }}

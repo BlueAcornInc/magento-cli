@@ -1,0 +1,137 @@
+#!/usr/bin/env variant
+definitions:
+  global: &global
+    - name: project
+      type: string
+      description: project slug
+      default: localhost
+
+    - name: host
+      type: string
+      description: php server host
+      default: 0.0.0.0
+
+    - name: port
+      type: string
+      description: php server port
+      default: "8080"
+
+    - name: routes
+      type: string
+      description: routes used for local development server
+      default: $(pwd)/pub/ $(pwd)/phpserver/router.php
+
+    - name: php-bin-cmd
+      type: string
+      description: default command to use to trigger local php server
+      default: php -d memory_limit=-1
+
+    - name: php-bin-path
+      type: string
+      description: default command to use to trigger local php server
+      default: /opt/homebrew/Cellar/php/ #$MAGECLI_PHP_VERSION/bin/
+
+    - name: php-version
+      type: string
+      description: version of php to invoke 
+      default: 8.1.6
+
+    - name: db-image-name
+      type: string
+      description: database docker image name to pull
+      default: mysql
+
+    - name: db-image-tag
+      type: string
+      description: database docker image tag to pull
+      default: 8.0-oracle
+
+    - name: db-host
+      type: string
+      description: hostname to database service
+      default: 127.0.0.1
+
+    - name: db-name
+      type: string
+      description: database name within database service
+      default: magento
+
+    - name: db-user
+      type: string
+      description: database username
+      default: root
+
+    - name: db-pass
+      type: string
+      description: database password
+      default:
+
+    - name: es-image-name
+      type: string
+      description: elasticsearch docker image name to pull
+      default: elasticsearch
+
+    - name: es-image-tag
+      type: string
+      description: elasticsearch docker image tag to pull
+      default: 7.10.1
+
+    - name: es-host
+      type: string
+      description: hostname to elasticsearch service
+      default: 127.0.0.1
+
+    - name: es-port
+      type: string
+      description: port to elasticsearch service
+      default: elasticsearch
+
+    - name: install-firstname
+      type: string
+      description: first name of default admin user
+      default: Magento
+
+    - name: install-lastname
+      type: string
+      description: last name of default admin user
+      default: User
+      
+    - name: install-email
+      type: string
+      description: email of default admin user
+      default: user@example.com
+
+    - name: install-username
+      type: string
+      description: username of default admin user
+      default: admin
+
+    - name: install-password
+      type: string
+      description: password of default admin user
+      default: admin123
+
+    - name: install-language
+      type: string
+      description: default langauge
+      default: en_US
+
+    - name: install-currency
+      type: string
+      description: default currency
+      default: USD
+
+    - name: install-timezone
+      type: string
+      description: default timezone
+      default: America/Chicago
+
+    - name: install-use-rewrites
+      type: string
+      description: use url rewrites
+      default: 1
+
+    - name: install-search-engine
+      type: string
+      description: configured search engine for magento backend
+      default: elasticsearch7

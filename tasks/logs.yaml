@@ -1,6 +1,6 @@
 #!/usr/bin/env variant
 tasks:
-  up:
+  logs:
     description: shows logs of backend services
     script: |
       docker-compose --project-name {{ get "project" }} -f $MAGECLI__PATH/services/database.yaml -f $MAGECLI__PATH/services/elasticsearch.yaml logs

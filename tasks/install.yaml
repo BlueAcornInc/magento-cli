@@ -1,48 +1,8 @@
 #!/usr/bin/env variant
+
 tasks:
-  install:
-    parameters: &global-parameters
-    - name: firstname
-      type: string
-      description: first name of default admin user
-      default: Magento
-    - name: lastname
-      type: string
-      description: last name of default admin user
-      default: User
-    - name: email
-      type: string
-      description: email of default admin user
-      default: user@example.com
-    - name: username
-      type: string
-      description: username of default admin user
-      default: admin
-    - name: password
-      type: string
-      description: password of default admin user
-      default: admin123
-    - name: language
-      type: string
-      description: default langauge
-      default: en_US
-    - name: currency
-      type: string
-      description: default currency
-      default: USD
-    - name: timezone
-      type: string
-      description: default timezone
-      default: America/Chicago
-    - name: use-rewrites
-      type: string
-      description: use url rewrites
-      default: 1
-    - name: search-engine
-      type: string
-      description: configured search engine for magento backend
-      default: elasticsearch7
-    description: installs magento to the backend services
+  install: 
+    description: installs magento to the backend serviceså
     script: |
       php -d memory_limit=-1 bin/magento setup:install \
         --base-url=http://$MAGECLI_BASE_URL \
