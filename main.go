@@ -48,7 +48,7 @@ func main() {
 	if len(os.Args) > 1 {
 		arg := os.Args[1]
 		if arg == "version" {
-			fmt.Println("Magento CLI by Blue Acorn iCi x Infosys " + version)
+			fmt.Println("Magento CLI by Blue Acorn iCi x Infosys version " + version)
 			os.Exit(0)
 		}
 	}
