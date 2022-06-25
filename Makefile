@@ -6,7 +6,7 @@ ifeq (run,$(firstword $(MAKECMDGOALS)))
 endif
 
 VERSION := $(shell git tag | grep ^v | sort -V | tail -n 1)
-LDFLAGS = -ldflags "-X main.Version=${VERSION}"
+LDFLAGS = -ldflags "-X main.version=${VERSION}"
 
 .PHONY: help
 
