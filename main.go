@@ -48,7 +48,7 @@ func main() {
 		cmd.YAML(yaml)
 	}
 
-	// clean teh temp diretory
+	// remove temp diretory
 	rmTemp()
 }
 

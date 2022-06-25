@@ -4,7 +4,7 @@ import (
 	"testing"
 )
 
-func TestFoo(t *testing.T) {
+func TestMain(t *testing.T) {
 
 	testMode = true
 	main()
