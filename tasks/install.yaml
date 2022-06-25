@@ -5,20 +5,20 @@ tasks:
     description: installs magento to the backend serviceså
     script: |
       php -d memory_limit=-1 bin/magento setup:install \
-        --base-url=http://$MAGECLI_BASE_URL \
-        --db-host=$MAGECLI_DB_HOST \
-        --db-name=$MAGECLI_DB_NAME \
-        --db-user=$MAGECLI_DB_USER \
-        --db-password=$MAGECLI_DB_PASS \
-        --admin-firstname=$MAGECLI_ADMIN_FIRSTNAME \
-        --admin-lastname=$MAGECLI_ADMIN_LASTNAME \
-        --admin-email=$MAGECLI_ADMIN_EMAIL \
-        --admin-user=$MAGECLI_ADMIN_USER \
-        --admin-password=$MAGECLI_ADMIN_PASSWORD \
-        --language=$MAGECLI_LANGUAGE \
-        --currency=$MAGECLI_CURRENCY \
-        --timezone=$MAGECLI_TIMEZONE \
-        --use-rewrites=$MAGECLI_USE_REWRITES \
-        --search-engine=$MAGECLI_SEARCH_ENGINE \
-        --elasticsearch-host=$MAGECLI_ELASTICSEARCH_HOST \
-        --elasticsearch-port=$MAGECLI_ELASTICSEARCH_PORT
+        --base-url=http://{{ get "host" }}:{{ get "port" }} \
+        --db-host={{ get "db-host" }}  \
+        --db-name={{ get "db-name" }} \
+        --db-user={{ get "db-user" }} \
+        --db-password={{ get "db-pass" }} \
+        --admin-firstname={{ get "install-firstnsme" }} \
+        --admin-lastname={{ get "install-lastname" }} \
+        --admin-email={{ get "install-email" }} \
+        --admin-user={{ get "install-username" }} \
+        --admin-password={{ get "install-password" }} \
+        --language={{ get "install-language" }} \
+        --currency={{ get "install-currency" }} \
+        --timezone={{ get "install-timezone" }} \
+        --use-rewrites={{ get "install-use-rewrites" }} \
+        --search-engine={{ get "install-search-engine" }} \
+        --elasticsearch-host={{ get "es-host" }} \
+        --elasticsearch-port={{ get "es-port" }}
