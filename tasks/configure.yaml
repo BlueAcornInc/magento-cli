@@ -3,4 +3,4 @@ tasks:
   configure:
     description: configures backend to use this codebase
     script: |
-      php bin/magento setup:store-config:set --base-url='http://$MAGECLI_BASE_URL/      
+      php bin/magento setup:store-config:set --base-url='http://{{ get "host" }}:{{ get "port" }}/      

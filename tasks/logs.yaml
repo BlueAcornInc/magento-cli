@@ -3,4 +3,4 @@ tasks:
   logs:
     description: shows logs of backend services
     script: |
-      docker-compose --project-name {{ get "project" }} -f $MAGECLI__PATH/services/database.yaml -f $MAGECLI__PATH/services/elasticsearch.yaml logs
+      docker-compose --project-name {{ get "project" }} -f .magento-cli/tmp/services/database.yaml -f .magento-cli/tmp/services/elasticsearch.yaml logs
