@@ -1,6 +1,6 @@
 #!/usr/bin/env variant
 definitions:
-  global: &global
+  parameters: &global
     - name: project
       type: string
       description: project slug
@@ -9,7 +9,7 @@ definitions:
     - name: host
       type: string
       description: php server host
-      default: 0.0.0.0
+      default: "0.0.0.0"
 
     - name: port
       type: string
@@ -64,7 +64,7 @@ definitions:
     - name: db-pass
       type: string
       description: database password
-      default:
+      default: ""
 
     - name: es-image-name
       type: string
@@ -129,7 +129,7 @@ definitions:
     - name: install-use-rewrites
       type: string
       description: use url rewrites
-      default: 1
+      default: "1"
 
     - name: install-search-engine
       type: string
