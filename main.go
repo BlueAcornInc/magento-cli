@@ -35,7 +35,19 @@ var testMode = false
 
 var tempDir string = "./" + configDir + "/tmp"
 
+var Version string = ""
+
 func main() {
+
+	// output version info
+	if len(os.Args) > 1 {
+		arg := os.Args[1]
+		if arg == "version" {
+			fmt.Println("Magento CLI by Blue Acorn iCi x Infosys " + Version)
+			os.Exit(0)
+		}
+	}
+
 	// put services files in a temp directory
 	extractYamlToTemp(services)
 

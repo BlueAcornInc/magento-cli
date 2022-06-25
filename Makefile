@@ -5,18 +5,21 @@ ifeq (run,$(firstword $(MAKECMDGOALS)))
   $(eval $(RUN_ARGS):;@:)
 endif
 
+VERSION := $(shell git tag | grep ^v | sort -V | tail -n 1)
+LDFLAGS = -ldflags "-X main.Version=${VERSION}"
+
 .PHONY: help
 
 help:
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}'
 
 build: ## creates binary
-	go build .
+	go build ${LDFLAGS} .
 install: build ## compiles and installs into system
 	sudo cp magento-cli /usr/local/bin/magento
 	sudo chmod +x /usr/local/bin/magento
 run: ## run the command through go, accepts args i.e. `make run -- build -h`
-	go run ./main.go $(RUN_ARGS)
+	go run ${LDFLAGS} ./main.go $(RUN_ARGS)
 test: build
 	go test --cover ./... 
 coverage: build ## run test suite suitable for codecov.io
