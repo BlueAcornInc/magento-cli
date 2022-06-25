@@ -1,0 +1,8 @@
+#!/usr/bin/env variant
+tasks:
+  sql:
+    interactive: true
+    parameters: *global 
+    description: provides a mysql tap
+    script: |
+      docker exec -it {{ get "project" }}-db-1 mysql
