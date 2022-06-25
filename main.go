@@ -46,10 +46,9 @@ func main() {
 
 func extractYamlToTemp(objects embed.FS) {
 
-	tempDir, err := ioutil.TempDir("/tmp", configDir+"-")
-	if err != nil {
-		log.Fatal(err)
-	}
+	tempDir := "./" + configDir + "/tmp"
+
+	os.MkdirAll(tempDir, 0777)
 
 	// fetches basic configuration, this uses embed.FS and sources from ./<objects>/
 	fs.WalkDir(objects, ".", func(path string, d fs.DirEntry, err error) error {
