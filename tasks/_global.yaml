@@ -1,5 +1,12 @@
 #!/usr/bin/env variant
 definitions:
+  bash:
+    - &envvars |
+      export MAGECLI_DB_IMAGE={{ get "db-image-name" }}
+      export MAGECLI_DB_TAG={{ get "db-image-tag" }}
+      export MAGECLI_ES_IMAGE={{ get "es-image-name" }}
+      export MAGECLI_ES_TAG={{ get "es-image-tag" }}
+      
   parameters: &global
     - name: project
       type: string

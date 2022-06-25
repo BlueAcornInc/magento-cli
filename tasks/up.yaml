@@ -2,5 +2,8 @@
 tasks:
   up:
     description: ups the docker compositions
-    script: |
-      docker-compose --project-name {{ get "project" }} -f .magento-cli/tmp/services/database.yaml -f .magento-cli/tmp/services/elasticsearch.yaml up -d && sleep 3
+    parameters: *global
+    script:
+      - *envvars
+
+      - docker-compose --project-name {{ get "project" }} -f .magento-cli/tmp/services/database.yaml -f .magento-cli/tmp/services/elasticsearch.yaml up -d && sleep 3

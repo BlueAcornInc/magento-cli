@@ -3,5 +3,5 @@ tasks:
   serve:
     parameters: *global 
     script: |
-      # echo {{ index .args }} 
+      echo {{ index .args }} 
       php -S {{ get "host" }}:{{ get "port" }} -t {{ get "routes" }}

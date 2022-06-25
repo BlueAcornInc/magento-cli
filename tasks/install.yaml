@@ -2,15 +2,18 @@
 
 tasks:
   install: 
-    description: installs magento to the backend serviceså
-    script: |
+    description: installs magento to the backend services
+    parameters: *global
+    script: 
+    - *envvars
+    - |
       php -d memory_limit=-1 bin/magento setup:install \
         --base-url=http://{{ get "host" }}:{{ get "port" }} \
         --db-host={{ get "db-host" }}  \
         --db-name={{ get "db-name" }} \
         --db-user={{ get "db-user" }} \
         --db-password={{ get "db-pass" }} \
-        --admin-firstname={{ get "install-firstnsme" }} \
+        --admin-firstname={{ get "install-firstname" }} \
         --admin-lastname={{ get "install-lastname" }} \
         --admin-email={{ get "install-email" }} \
         --admin-user={{ get "install-username" }} \

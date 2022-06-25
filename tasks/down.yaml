@@ -2,5 +2,7 @@
 tasks:
   down:
     description: downs the docker compositions
-    script: |
-      docker-compose --project-name {{ get "project" }} -f .magento-cli/tmp/services/database.yaml -f .magento-cli/tmp/services/elasticsearch.yaml down
+    parameters: *global
+    script: 
+      - *envvars
+      - docker-compose --project-name {{ get "project" }} -f .magento-cli/tmp/services/database.yaml -f .magento-cli/tmp/services/elasticsearch.yaml down
