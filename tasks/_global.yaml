@@ -6,7 +6,7 @@ definitions:
       export MAGECLI_DB_TAG={{ get "db-image-tag" }}
       export MAGECLI_ES_IMAGE={{ get "es-image-name" }}
       export MAGECLI_ES_TAG={{ get "es-image-tag" }}
-      
+
   parameters: &global
     - name: project
       type: string
