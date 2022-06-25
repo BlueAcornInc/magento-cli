@@ -21,8 +21,6 @@ import (
 	"github.com/mumoshu/variant/cmd"
 )
 
-var tempDir string
-
 //go:embed tasks/*.yaml
 var tasks embed.FS
 
@@ -33,20 +31,28 @@ var yamlExt string = ".yaml"
 
 var configDir string = ".magento-cli"
 
+var testMode = false
+
+var tempDir string = "./" + configDir + "/tmp"
+
 func main() {
 	// put services files in a temp directory
 	extractYamlToTemp(services)
 
 	// feeds configuration into paraser and executes
-	cmd.YAML(string(loadYaml(tasks)))
+
+	yaml := string(loadYaml(tasks))
+
+	// do not execute if running tests
+	if !testMode {
+		cmd.YAML(yaml)
+	}
 
 	// clean teh temp diretory
 	rmTemp()
 }
 
 func extractYamlToTemp(objects embed.FS) {
-
-	tempDir := "./" + configDir + "/tmp"
 
 	os.MkdirAll(tempDir, 0777)
 
