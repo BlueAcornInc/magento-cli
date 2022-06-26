@@ -1,6 +1,6 @@
 # magento-cli
 
-[Documentation](https://superterran.net/magento-cli) |
+[Documentation](https://magento-cli.com/docs/) |
 [Discussions](https://github.com/blueacorninc/magento-cli/discussions) |
 [Twitter](https://twitter.com/superterran) |
 [Contribution Guide](CONTRIBUTING.md)
