@@ -31,7 +31,7 @@ definitions:
     - name: php-bin-cmd
       type: string
       description: default command to use to trigger local php server
-      default: php -d memory_limit=-1
+      default: php -d memory_limit=-1 -d max_input_vars=10000 -S
 
     - name: php-bin-path
       type: string

@@ -3,5 +3,6 @@ tasks:
   serve:
     parameters: *global 
     script: |
-      echo {{ index .args }} 
-      php -S {{ get "host" }}:{{ get "port" }} -t {{ get "routes" }}
+      COMMAND="{{ get "php-bin-cmd" }} {{ get "host" }}:{{ get "port" }} -t {{ get "routes" }}"
+      echo $COMMAND
+      $COMMAND
