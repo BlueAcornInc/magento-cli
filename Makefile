@@ -16,8 +16,9 @@ help:
 build: ## creates binary
 	go build ${LDFLAGS} .
 install: build ## compiles and installs into system
-	sudo cp magento-cli /usr/local/bin/magento
-	sudo chmod +x /usr/local/bin/magento
+	rm ~/.magento-cloud/bin/magento
+	cp ./magento-cli ~/.magento-cloud/bin/magento
+	sudo chmod +x ~/.magento-cloud/bin/magento
 run: ## run the command through go, accepts args i.e. `make run -- build -h`
 	go run ${LDFLAGS} ./main.go $(RUN_ARGS)
 test: build

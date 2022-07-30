@@ -28,10 +28,10 @@ definitions:
       description: routes used for local development server
       default: $(pwd)/pub/ $(pwd)/phpserver/router.php
 
-    - name: php-bin-cmd
+    - name: php-cmd
       type: string
       description: default command to use to trigger local php server
-      default: php -d memory_limit=-1 -d max_input_time=3600 -d max_input_vars=10000 -S
+      default: php -d memory_limit=-1 -d max_input_time=3600 -d max_input_vars=10000
 
     - name: php-bin-path
       type: string
