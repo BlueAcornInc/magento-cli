@@ -86,12 +86,12 @@ definitions:
     - name: es-host
       type: string
       description: hostname to elasticsearch service
-      default: 127.0.0.1
+      default: localhost
 
     - name: es-port
       type: string
       description: port to elasticsearch service
-      default: elasticsearch
+      default: "9200"
 
     - name: install-firstname
       type: string
