@@ -1,8 +1,9 @@
 #!/usr/bin/env variant
+
 tasks:
   serve:
-    parameters: *global 
-    script: |
-      COMMAND="{{ get "php-bin-cmd" }} -S {{ get "host" }}:{{ get "port" }} -t {{ get "routes" }}"
-      echo $COMMAND
-      $COMMAND
+    parameters: *global
+    script: 
+      - COMMAND="{{ get "php-bin-cmd" }} -S {{ get "host" }}:{{ get "port" }} -t {{ get "routes" }}"
+      - echo $COMMAND
+      - $COMMAND

@@ -5,7 +5,6 @@ tasks:
     description: installs magento to the backend services
     parameters: *global
     script: 
-    - *envvars
     - |
       php -d memory_limit=-1 bin/magento setup:install \
         --base-url=http://{{ get "host" }}:{{ get "port" }} \

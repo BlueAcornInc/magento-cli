@@ -6,6 +6,7 @@ definitions:
       export MAGECLI_DB_TAG={{ get "db-image-tag" }}
       export MAGECLI_ES_IMAGE={{ get "es-image-name" }}
       export MAGECLI_ES_TAG={{ get "es-image-tag" }}
+      export MAGECLI_PHP_BIN_CMD={{ get "php-bin-cmd" }}
 
   parameters: &global
     - name: project
@@ -28,7 +29,7 @@ definitions:
       description: routes used for local development server
       default: $(pwd)/pub/ $(pwd)/phpserver/router.php
 
-    - name: php-cmd
+    - name: php-bin-cmd
       type: string
       description: default command to use to trigger local php server
       default: php -d memory_limit=-1 -d max_input_time=3600 -d max_input_vars=10000
